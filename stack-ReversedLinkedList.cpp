@@ -7,22 +7,22 @@ struct Node {
   int data;
   struct Node* next;
 };
-struct Node* head;
+struct Node* head2;
 void insert(int x) {
   struct Node* temp = (struct Node*) malloc(sizeof(struct Node));
   temp->data = x;
-  temp->next = head;
-  head = temp;
+  temp->next = head2;
+  head2 = temp;
 }
 void Reverse() {
   stack<struct Node*>s;
-  struct Node* temp = head;
+  struct Node* temp = head2;
   while(temp != NULL) {
     s.push(temp);
     temp = temp->next;
   }
   struct Node* temp2 = s.top();
-  head = temp2;
+  head2 = temp2;
   s.pop();
   while(!s.empty()) {
     temp2->next = s.top();
@@ -32,7 +32,7 @@ void Reverse() {
   temp2->next = NULL;
 }
 void print() {
-  struct Node* temp3 = head;
+  struct Node* temp3 = head2;
   while(temp3!= NULL) {
     printf("%d ", temp3->data - '0');
     temp3 = temp3->next;
@@ -40,7 +40,7 @@ void print() {
   printf("\n");
 }
 int main(void) {
-  head = NULL;
+  head2 = NULL;
   char c[20];
   printf("Enter any LinkedList: ");
   scanf("%s",c);
