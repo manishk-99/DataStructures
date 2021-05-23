@@ -84,9 +84,6 @@ struct Node* Delete(Node* root, char y) {
     return root;
 }
 
-
-
-
 int main() {
     root = insert(root,'F');
     root = insert(root,'D');
