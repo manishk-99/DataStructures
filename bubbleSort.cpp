@@ -17,9 +17,8 @@ void bubbleSort(int A[], int N) {
 }
 
 int main() {
-    int N = 6;
-    int A[N] = {2,7,4,1,5,3};
-    bubbleSort(A,N);
+    int A[6] = {2,7,4,1,5,3};
+    bubbleSort(A,6);
     for(int i=0;i<6;i++) {
         cout<<A[i]<<endl;
     }
